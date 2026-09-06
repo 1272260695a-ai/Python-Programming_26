@@ -1,0 +1,17 @@
+#     ***** RIGHT-ANGLED TRIANGLE *****
+def triangle(s1,s2,s3):
+    list1 = [s1,s2,s3]
+    list1.sort()
+    z = list1[2]
+    y = list1[1]
+    x = list1[0]
+    if (z)**2 == (x)**2 + (y)**2:
+        print("Triangle is right angled")
+    else:
+        print("Not a right angled triangle")
+
+s1 = int(input("Enter first side:"))
+s2 = int(input("Enter second side:"))
+s3 = int(input("Enter third side:"))
+
+triangle(s1,s2,s3)
