@@ -1,34 +1,49 @@
-#    *****  LARGEST OF 3 NUMBERS(IF-ELSE)  ***** 
-a = int(input("enter 1st no."))
-b = int(input("enter 2nd no."))
-c = int(input("enter 3rd no."))
+#         ***** LIST *****
+namelist = ["Aditya","Atharva","Tanay","Chinmay","Ayush"]
+print(namelist)
+#ADD
+namelist.append("Soham")
+print(namelist)
+namelist.insert(1,"Rajesh")
+print(namelist)
+#UPDATE
+namelist[4] = "Sahil"
+print(namelist)
+#DELETE
+namelist.pop(3)
+print(namelist)
+namelist.remove("Atharva")
+del namelist
 
-if a != b and a != c and b != c:
-    if a > b:
-        if a > c:
-            print(a," is the greatest!")
-        else:
-            print(c," is the greatest!")
-    else:
-        if b > c:
-            print(b," is the greatest!")
-        else:
-            print(c," is the greatest!")
-elif a == b and a != c:
-    if a > c:
-        print(a," and ",b," are the greatest!")
-    else:
-        print(c," is the greatest!")
-elif a == c and a != b:
-    if a > b:
-        print(a," and ",c," are the greatest!")
-    else:
-        print(b," is the greatest!")
-elif c == b and b != a:
-    if b > a:
-        print(b," and ",c," are the greatest!")
-    else:
-        print(a," is the greatest!")       
-else:
-    print(a," and ",b," and ",c," all are the greatest!")
+#        ***** TUPLE ******
+tuple1 = ("Aditya","Atharva","Tanay","Chinmay","Ayush")
+print(tuple1[2])
+z = ("Piyush",)
+tuple1 += z
+print(tuple1)
+y = list(tuple1)
+y.append("Soham")
+y.insert(1,"Rajesh")
+y[0] = "Sahil"
+y.pop(3)
+tuple1 = tuple(y)
+print(tuple1)
 
+#      ***** DICTIONARY *****
+dict1 = {"Aditya" : 1,
+         "Atharva" : 2,
+         "Tanay" : 3,
+         "Chinmay" : 4}
+print(dict1)
+print(dict1["Chinmay"])
+dict1["Tanay"] = 5
+print(dict1)
+dict1.update({"Atharva" : 6})
+print(dict1)
+print(dict1.get("Aditya"))
+dict1["Soham"] = 9
+print(dict1)
+dict1.pop("Aditya")
+print(dict1)
+dict1.popitem()
+print(dict1)
