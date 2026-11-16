@@ -1,0 +1,32 @@
+#         ***** Matrix Addition using Numpy *****
+import numpy as np
+rows = int(input("Enter number of rows: "))
+cols = int(input("Enter number of columns: "))
+matrix1_data = []
+for i in range(rows):
+    row = list(map(int, input(f"Enter row {i+1} elements of 1st matrix separated by spaces: ").split()))
+    matrix1_data.append(row)
+matrix1 = np.array(matrix1_data)
+matrix2_data = []
+for i in range(rows):
+    row = list(map(int, input(f"Enter row {i+1} elements of 2nd matrix separated by spaces: ").split()))
+    matrix2_data.append(row)
+matrix2 = np.array(matrix2_data)
+print("Matrix 1:",matrix1)
+print("Matrix 2:",matrix2)
+print("Matrix 1 + Matrix 2 =",matrix1 + matrix2)
+----------------------------------------------------------------------------------------------------------------
+Output:
+Enter number of rows:  2
+Enter number of columns:  2
+Enter row 1 elements of 1st matrix separated by spaces:  1 2
+Enter row 2 elements of 1st matrix separated by spaces:  3 4
+Enter row 1 elements of 2nd matrix separated by spaces:  7 3
+Enter row 2 elements of 2nd matrix separated by spaces:  5 8
+Matrix 1: [[1 2]
+ [3 4]]
+Matrix 2: [[7 3]
+ [5 8]]
+Matrix 1 + Matrix 2 = [[ 8  5]
+ [ 8 12]]
+----------------------------------------------------------------------------------------------------------------
