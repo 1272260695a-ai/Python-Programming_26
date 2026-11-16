@@ -1,0 +1,72 @@
+#         ***** LIST *****
+namelist = ["Aditya","Atharva","Tanay","Chinmay","Ayush"]
+print(namelist)
+#ADD
+namelist.append("Soham")
+print(namelist)
+namelist.insert(1,"Rajesh")
+print(namelist)
+#UPDATE
+namelist[4] = "Sahil"
+print(namelist)
+#DELETE
+namelist.pop(3)
+print(namelist)
+namelist.remove("Atharva")
+del namelist
+-------------------------------------------------------------------------------
+Output:
+['Aditya', 'Atharva', 'Tanay', 'Chinmay', 'Ayush']
+['Aditya', 'Atharva', 'Tanay', 'Chinmay', 'Ayush', 'Soham']
+['Aditya', 'Rajesh', 'Atharva', 'Tanay', 'Chinmay', 'Ayush', 'Soham']
+['Aditya', 'Rajesh', 'Atharva', 'Tanay', 'Sahil', 'Ayush', 'Soham']
+['Aditya', 'Rajesh', 'Atharva', 'Sahil', 'Ayush', 'Soham']
+-------------------------------------------------------------------------------
+#        ***** TUPLE ******
+tuple1 = ("Aditya","Atharva","Tanay","Chinmay","Ayush")
+print(tuple1[2])
+z = ("Piyush",)
+tuple1 += z
+print(tuple1)
+y = list(tuple1)
+y.append("Soham")
+y.insert(1,"Rajesh")
+y[0] = "Sahil"
+y.pop(3)
+tuple1 = tuple(y)
+print(tuple1)
+-------------------------------------------------------------------------------
+Output:
+Tanay
+('Aditya', 'Atharva', 'Tanay', 'Chinmay', 'Ayush', 'Piyush')
+('Sahil', 'Rajesh', 'Atharva', 'Chinmay', 'Ayush', 'Piyush', 'Soham')
+-------------------------------------------------------------------------------
+#      ***** DICTIONARY *****
+dict1 = {"Aditya" : 1,
+         "Atharva" : 2,
+         "Tanay" : 3,
+         "Chinmay" : 4}
+print(dict1)
+print(dict1["Chinmay"])
+dict1["Tanay"] = 5
+print(dict1)
+dict1.update({"Atharva" : 6})
+print(dict1)
+print(dict1.get("Aditya"))
+dict1["Soham"] = 9
+print(dict1)
+dict1.pop("Aditya")
+print(dict1)
+dict1.popitem()
+print(dict1)
+-------------------------------------------------------------------------------
+Output:
+{'Aditya': 1, 'Atharva': 2, 'Tanay': 3, 'Chinmay': 4}
+4
+{'Aditya': 1, 'Atharva': 2, 'Tanay': 5, 'Chinmay': 4}
+{'Aditya': 1, 'Atharva': 6, 'Tanay': 5, 'Chinmay': 4}
+1
+{'Aditya': 1, 'Atharva': 6, 'Tanay': 5, 'Chinmay': 4, 'Soham': 9}
+{'Atharva': 6, 'Tanay': 5, 'Chinmay': 4, 'Soham': 9}
+{'Atharva': 6, 'Tanay': 5, 'Chinmay': 4}
+-------------------------------------------------------------------------------
